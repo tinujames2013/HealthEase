@@ -1,0 +1,23 @@
+{% extends 'hospital/homebase.html' %}
+
+{% block content %}
+
+<br>
+<br>
+
+<div class="jumbotron text-white position-relative" style="margin-bottom:0px; background: url('/static/images/image2.jpg') no-repeat center center; background-size: cover; padding: 100px;">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);"></div> <!-- Dark Overlay -->
+
+  <div class="position-relative text-center">
+    <h1 class="display-4">Hello, Patient</h1>
+    <p class="lead">Welcome to Hospital Management System.</p>
+    <hr class="my-4">
+    <p>You can access various features after Login/SignUp.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/patientsignup" role="button">Register Your Account</a>
+      <a class="btn btn-primary btn-lg" href="/patientlogin" role="button">Login</a>
+    </p>
+  </div>
+</div>
+
+{% endblock content %}

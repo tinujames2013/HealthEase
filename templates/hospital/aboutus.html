@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hospital | About Us</title>
+
+  <style>
+    .hero-section {
+      background: url('{% static "images/about.jpg" %}') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      padding: 20px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-heading {
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero-subtext {
+      font-size: 22px;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+
+    .btn-custom {
+      background-color: #007bff;
+      border-color: #007bff;
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s ease-in-out;
+      border-radius: 8px;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .about-section {
+      padding: 60px 15%;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  {% include "hospital/navbar.html" %}
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-heading">Who We Are</h1>
+      <p class="hero-subtext">Empowering Healthcare Through Innovation & Compassion</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <h2>Welcome to Our Healthcare Platform</h2>
+    <p>We are dedicated to providing seamless healthcare solutions for patients, doctors, and hospital administrators.
+      Our goal is to make healthcare **accessible, efficient, and patient-friendly**.</p>
+    <p>From online appointments to real-time patient tracking, we bring **modern technology** to the medical field.</p>
+    <br>
+    <a class="btn btn-custom" href="/" role="button">Return to Home</a>
+  </div>
+
+  {% include "hospital/footer.html" %}
+
+</body>
+</html>
